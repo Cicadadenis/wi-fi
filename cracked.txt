@@ -1,0 +1,18 @@
+[
+  {
+    "bssid": "04:95:E6:AB:C4:40", 
+    "essid": "Tenda_ABC440", 
+    "key": "19891989", 
+    "date": 1583609827, 
+    "handshake_file": "hs/handshake_TendaABC440_04-95-E6-AB-C4-40_2020-03-07T19-36-28.cap", 
+    "type": "WPA"
+  }, 
+  {
+    "bssid": "04:8D:38:CC:D8:6E", 
+    "essid": "netis_CCD86E", 
+    "key": "password", 
+    "date": 1583672716, 
+    "handshake_file": "hs/handshake_netisCCD86E_04-8D-38-CC-D8-6E_2020-03-08T13-05-13.cap", 
+    "type": "WPA"
+  }
+]
