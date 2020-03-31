@@ -50,7 +50,7 @@ Wifi разработан специально для последней вер�
 ----------
 ```
 git clone https://github.com/bednakovdenis/wifi.git
-cd wifi
+cd wi-fi
 sudo ./Wifi.py
 ```
 
