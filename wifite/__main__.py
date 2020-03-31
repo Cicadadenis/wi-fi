@@ -4,7 +4,7 @@
 try:
     from .config import Configuration
 except (ValueError, ImportError) as e:
-    raise Exception('You may need to run wifite from the root directory (which includes README.md)', e)
+    raise Exception('Вам может потребоваться запустить Wi-Fi из корневого каталога (который включает в себя README.md)', e)
 
 from .util.color import Color
 
@@ -16,7 +16,7 @@ class Wifite(object):
 
     def __init__(self):
         '''
-        Initializes Wifite. Checks for root permissions and ensures dependencies are installed.
+        Initializes Wifi. Checks for root permissions and ensures dependencies are installed.
         '''
 
         self.print_banner()
@@ -24,8 +24,8 @@ class Wifite(object):
         Configuration.initialize(load_interface=False)
 
         if os.getuid() != 0:
-            Color.pl('{!} {R}error: {O}wifite{R} must be run as {O}root{W}')
-            Color.pl('{!} {R}re-run with {O}sudo{W}')
+            Color.pl('{!} {R}error: {O}wifi{R} должен быть запущен как {O}root{W}')
+            Color.pl('{!} {R}перезапустить с {O}sudo{W}')
             Configuration.exit_gracefully(0)
 
         from .tools.dependency import Dependency
@@ -57,9 +57,9 @@ class Wifite(object):
     def print_banner(self):
         '''Displays ASCII art of the highest caliber.'''
         Color.pl(r' {G}  .     {GR}{D}     {W}{G}     .    {W}')
-        Color.pl(r' {G}.´  ·  .{GR}{D}     {W}{G}.  ·  `.  {G}wifite {D}%s{W}' % Configuration.version)
-        Color.pl(r' {G}:  :  : {GR}{D} (¯) {W}{G} :  :  :  {W}{D}automated wireless auditor{W}')
-        Color.pl(r' {G}`.  ·  `{GR}{D} /¯\ {W}{G}´  ·  .´  {C}{D}https://github.com/derv82/wifite2{W}')
+        Color.pl(r' {G}.´  ·  .{GR}{D}     {W}{G}.  ·  `.  {G}wifi{D}%s{W}' % Configuration.version)
+        Color.pl(r' {G}:  :  : {GR}{D} (¯) {W}{G} :  :  :  {W}{D}Bednakov-Xack-Live{W}')
+        Color.pl(r' {G}`.  ·  `{GR}{D} /¯\ {W}{G}´  ·  .´  {C}{D}https://github.com/bednakovdenis/wifi{W}')
         Color.pl(r' {G}  `     {GR}{D}/¯¯¯\{W}{G}     ´    {W}')
         Color.pl('')
 
@@ -81,7 +81,7 @@ class Wifite(object):
         # Attack
         attacked_targets = AttackAll.attack_multiple(targets)
 
-        Color.pl('{+} Finished attacking {C}%d{W} target(s), exiting' % attacked_targets)
+        Color.pl('{+} Законченная атака {C}%d{W} цель(и), выход' % attacked_targets)
 
 
 ##############################################################
